@@ -9,7 +9,7 @@ using System.Collections.Generic;
 namespace Efz.Tools {
   
   /// <summary>
-  /// Comparer that can be dynamically defined.
+  /// Comparer that can be generically defined.
   /// </summary>
   public class InlineComparer<T> : IEqualityComparer<T> {
     

@@ -8,9 +8,7 @@ namespace Efz.Tools {
     
     public uint Get {
       get {
-        if( set ) {
-          return size;
-        }
+        if( set ) return size;
         set = true;
         return size = (uint)Marshal.SizeOf(typeof(T));
       }

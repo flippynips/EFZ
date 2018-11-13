@@ -6,7 +6,7 @@ using System;
 namespace Efz.Tools {
   
   /// <summary>
-  /// Helper class referencing 0 classes for completion.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple : IArgs {
     
@@ -57,7 +57,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A> : Teple, IArgs<A> {
         
@@ -102,7 +102,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A, B> : Teple<A>, IArgs<A,B> {
     
@@ -125,7 +125,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A, B, C> : Teple<A, B>, IArgs<A,B,C>, IEquatable<Teple<A,B,C>> {
         
@@ -177,7 +177,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A, B, C, D> : Teple<A, B, C>, IArgs<A,B,C,D> {
         
@@ -202,7 +202,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A, B, C, D, E> : Teple<A, B, C, D>, IArgs<A,B,C,D,E>, IEquatable<Teple<A,B,C,D,E>> {
         
@@ -260,7 +260,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A, B, C, D, E, F> : Teple<A, B, C, D, E>, IArgs<A,B,C,D,E,F>, IEquatable<Teple<A,B,C,D,E,F>> {
         
@@ -321,7 +321,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A,B,C,D,E,F,G> : Teple<A,B,C,D,E,F>, IArgs<A,B,C,D,E,F,G>, IEquatable<Teple<A,B,C,D,E,F,G>> {
     
@@ -385,7 +385,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A,B,C,D,E,F,G,H> : Teple<A,B,C,D,E,F,G>, IArgs<A,B,C,D,E,F,G,H>, IEquatable<Teple<A,B,C,D,E,F,G,H>> {
     
@@ -453,7 +453,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A,B,C,D,E,F,G,H,I> : Teple<A,B,C,D,E,F,G,H>, IArgs<A,B,C,D,E,F,G,H,I>, IEquatable<Teple<A,B,C,D,E,F,G,H,I>> {
     
@@ -524,7 +524,7 @@ namespace Efz.Tools {
   }
   
   /// <summary>
-  /// Helper class referencing one or more types.
+  /// Reflection of the .NET Tuple class without immutability.
   /// </summary>
   public class Teple<A,B,C,D,E,F,G,H,I,J> : Teple<A,B,C,D,E,F,G,H,I>, IArgs<A,B,C,D,E,F,G,H,I,J>, IEquatable<Teple<A,B,C,D,E,F,G,H,I,J>> {
     

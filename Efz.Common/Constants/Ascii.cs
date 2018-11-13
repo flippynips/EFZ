@@ -5,6 +5,7 @@
  */
 
 namespace Efz {
+  
   /// <summary>
   /// Description of Ascii bytes.
   /// </summary>

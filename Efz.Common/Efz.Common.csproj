@@ -79,7 +79,6 @@
     <Compile Include="Collections\Stack.cs" />
     <Compile Include="Collections\TightRig.cs" />
     <Compile Include="Collections\TypeQueue.cs" />
-    <Compile Include="Constants\Aliases.cs" />
     <Compile Include="Constants\Ascii.cs" />
     <Compile Include="Constants\Chars.cs" />
     <Compile Include="Constants\Encodings.cs" />

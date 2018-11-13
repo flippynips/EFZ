@@ -58,12 +58,11 @@ namespace Efz.Tools {
     //-------------------------------------------//
     
     /// <summary>
-    /// Initializes a new instance of the <see cref="sp.tools.FlipperMulti`1"/> class with specified number of items.
+    /// Initialize a new instance of the FlipperMulti class with specified number of items.
     /// </summary>
-    /// <param name="_itemNumber">Item number. Must be greater than 1.</param>
-    public FlipperMulti(int _itemNumber) {
-      items = new T[_itemNumber];
-      for(int i = _itemNumber-1; i >= 0; --i) {
+    public FlipperMulti(int itemNumber) {
+      items = new T[itemNumber];
+      for(int i = itemNumber-1; i >= 0; --i) {
         items[i] = new T();
       }
     }

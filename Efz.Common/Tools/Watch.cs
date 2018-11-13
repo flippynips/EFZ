@@ -4,7 +4,7 @@ using Efz.Threading;
 namespace Efz.Tools {
   
   /// <summary>
-  /// Repeating timer with timed actions.
+  /// Repeating timer for repeatable scheduled actions.
   /// </summary>
   public class Watch : IDisposable {
     

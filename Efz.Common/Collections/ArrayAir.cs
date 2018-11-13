@@ -5,7 +5,7 @@ using System.Collections;
 namespace Efz.Collections {
   
   /// <summary>
-  /// A class designed for management of an array in favor of callback functionality.
+  /// A class designed for management of an array with callback functionality.
   /// </summary>
   public class ArrayAir<T> : IEnumerable<T> {
     

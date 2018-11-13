@@ -57,7 +57,7 @@ namespace Efz.Data {
     /// </summary>
     public double Double { get { return this.String.ToDouble(); } set { this._value = value; Set = true; } }
     /// <summary>
-    /// Get a double representation of the node value.
+    /// Get a byte array representation of the node value.
     /// </summary>
     public byte[] Bytes { get { return Convert.FromBase64String(String); } set { this._value = Convert.ToBase64String(value); Set = true; } }
     

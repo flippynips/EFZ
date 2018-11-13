@@ -14,7 +14,7 @@ namespace Efz {
     //-------------------------------------------//
     
     /// <summary>
-    /// The number of threads used for the application.
+    /// The number of threads to be used for the application.
     /// </summary>
     public const int ThreadCount = 10;
     /// <summary>

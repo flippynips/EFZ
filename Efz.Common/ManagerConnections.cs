@@ -10,7 +10,7 @@ using Efz.Tools;
 namespace Efz {
   
   /// <summary>
-  /// Factory for API instances.
+  /// Factory of Connections.
   /// </summary>
   public class ManagerConnections : Singleton<ManagerConnections> {
     
@@ -20,15 +20,6 @@ namespace Efz {
     /// The connection manager will in most cases be initialized second.
     /// </summary>
     protected override byte SingletonPriority { get { return 245; } }
-    
-    /// <summary>
-    /// The default port this application will listen and broadcast to.
-    /// </summary>
-    public static int Port { get; protected set; }
-    /// <summary>
-    /// Default ip address for any server interface.
-    /// </summary>
-    public static byte[] IpAddress { get; protected set; }
     
     //-------------------------------------------//
     
@@ -351,7 +342,7 @@ namespace Efz {
     /// <summary>
     /// Dispose of all connections.
     /// </summary>
-    protected override void End(Node node) {
+    protected override void End(Node configuration) {
       
       _lock.Take();
       foreach(ArrayRig<IConnection> source in _sources.Values) {
@@ -362,9 +353,6 @@ namespace Efz {
       }
       _sources.Clear();
       _lock.Release();
-      
-      // create configuration node
-      node["Port"].Object = Port;
       
     }
     

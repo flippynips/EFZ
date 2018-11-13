@@ -399,7 +399,6 @@ namespace Efz.Data {
           _serialized = false;
           return node;
       }
-      //throw new Exception("Node Parser : Unexpected token " + (char)token + " at index " + stream.Stream.Position);
     }
     
     /// <summary>

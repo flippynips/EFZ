@@ -8,7 +8,7 @@ using System;
 namespace Efz.Text {
   
   /// <summary>
-  /// Instance of parsing a rule.
+  /// Base class representing a parsing rule.
   /// </summary>
   public abstract class Parse {
     
