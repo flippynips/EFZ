@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{EA8E5FBB-509F-44BF-B0C5-B2B0D1872598}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">32</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Efz.Web</RootNamespace>
+    <AssemblyName>Efz.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>Full</DebugType>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>INFO;DEBUG;WARNING;ERROR;WINDOWS</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptCompileOnBuildEnabled>True</TypeScriptCompileOnBuildEnabled>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptTarget>ES6</TypeScriptTarget>
+    <TypeScriptModuleKind>none</TypeScriptModuleKind>
+    <TypeScriptOutFile>Efz.js</TypeScriptOutFile>
+    <TypeScriptOutDir>F:\Projects\Chan</TypeScriptOutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>INFO;WARNING;ERROR</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '32' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '64' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x64</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\packages\protobuf-net.2.3.2\lib\net40\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.cs" />
+    <Compile Include="Display\Elements\ElementLink.cs" />
+    <Compile Include="Display\ExtendElement.cs" />
+    <Compile Include="Http\HttpClient.cs" />
+    <Compile Include="Http\HttpConnection.cs" />
+    <Compile Include="Http\HttpMethod.cs" />
+    <Compile Include="Http\HttpPostParam.cs" />
+    <Compile Include="Http\HttpPostParams.cs" />
+    <Compile Include="Http\HttpRedirect.cs" />
+    <Compile Include="Http\HttpRequest.cs" />
+    <Compile Include="Http\HttpRequestHeader.cs" />
+    <Compile Include="Http\HttpRequestHeaders.cs" />
+    <Compile Include="Http\HttpRequestResolver.cs" />
+    <Compile Include="Http\HttpRequirement.cs" />
+    <Compile Include="Http\HttpResponseHeader.cs" />
+    <Compile Include="Http\HttpResponseHeaders.cs" />
+    <Compile Include="Http\HttpRoutine.cs" />
+    <Compile Include="Http\HttpSendOptions.cs" />
+    <Compile Include="Http\HttpServer.cs" />
+    <Compile Include="Http\HttpSite.cs" />
+    <Compile Include="Http\Javascript\Attributes\JsFunction.cs" />
+    <Compile Include="Http\Javascript\Attributes\JsProperty.cs" />
+    <Compile Include="Http\Javascript\Commands\JsCommandNew.cs" />
+    <Compile Include="Http\Javascript\Commands\JsCommandString.cs" />
+    <Compile Include="Http\Javascript\Commands\JsCommand.cs" />
+    <Compile Include="Http\Javascript\Commands\JsCommandVar.cs" />
+    <Compile Include="Http\Javascript\Js.cs" />
+    <Compile Include="Http\Javascript\JsBuilder.cs" />
+    <Compile Include="Http\Javascript\Classes\JsMethod.cs" />
+    <Compile Include="Http\Javascript\Classes\JsPrototype.cs" />
+    <Compile Include="Http\Javascript\Classes\JsClass.cs" />
+    <Compile Include="Http\Javascript\Scripts\CustomScript.cs" />
+    <Compile Include="Http\Javascript\Scripts\Script.cs" />
+    <Compile Include="Http\Javascript\Scripts\Timer.cs" />
+    <Compile Include="Display\Elements\Element.cs" />
+    <Compile Include="Display\Elements\ElementComment.cs" />
+    <Compile Include="Display\Elements\Element.Helper.cs" />
+    <Compile Include="Display\Elements\ElementForm.cs" />
+    <Compile Include="Display\Elements\ElementInput.cs" />
+    <Compile Include="Display\Elements\ElementTable.cs" />
+    <Compile Include="Display\Elements\InputType.cs" />
+    <Compile Include="Display\Elements\Tags.cs" />
+    <Compile Include="Display\ElementBuilder.cs" />
+    <Compile Include="Display\ElementParser.cs" />
+    <Compile Include="Display\Elements.cs" />
+    <Compile Include="Display\Tools\ExtendStyle.cs" />
+    <Compile Include="Display\Tools\MarkdownParser.cs" />
+    <Compile Include="Display\Tools\WebColor.cs" />
+    <Compile Include="Display\Tools\Style.cs" />
+    <Compile Include="Display\Tools\ScalarValue.cs" />
+    <Compile Include="Display\Tools\StyleKeys.cs" />
+    <Compile Include="External\Alchemy\AccessPolicyServer.cs" />
+    <Compile Include="External\Alchemy\Classes\Context.cs" />
+    <Compile Include="External\Alchemy\Classes\Header.cs" />
+    <Compile Include="External\Alchemy\Classes\Response.cs" />
+    <Compile Include="External\Alchemy\Classes\UserContext.cs" />
+    <Compile Include="External\Alchemy\Handlers\Authentication.cs" />
+    <Compile Include="External\Alchemy\Handlers\Handler.cs" />
+    <Compile Include="External\Alchemy\Handlers\IAuthentication.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\DataFrame.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\hybi00\Authentication.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\hybi00\DataFrame.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\hybi00\Handler.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\hybi00\Handshakes.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\rfc6455\Authentication.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\rfc6455\DataFrame.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\rfc6455\FrameHeader.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\rfc6455\Handler.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\rfc6455\Handshakes.cs" />
+    <Compile Include="External\Alchemy\Handlers\WebSocket\WebSocketHandler.cs" />
+    <Compile Include="External\Alchemy\TCPServer.cs" />
+    <Compile Include="External\Alchemy\WebSocketClient.cs" />
+    <Compile Include="External\Alchemy\WebSocketServer.cs" />
+    <Compile Include="Http\Javascript\Values\JsValue.cs" />
+    <Compile Include="Http\Javascript\Values\JsNum.cs" />
+    <Compile Include="Http\Javascript\Values\JsStr.cs" />
+    <Compile Include="Http\Javascript\Values\JsVar.cs" />
+    <Compile Include="Http\Javascript\Values\JsVec.cs" />
+    <Compile Include="Smtp\SmtpMail.cs" />
+    <Compile Include="Tools\AsyncTcpSocket.cs" />
+    <Compile Include="Tools\AsyncUdpSocket.cs" />
+    <Compile Include="Tools\BufferQueue.cs" />
+    <Compile Include="Tools\NetAddress.cs" />
+    <Compile Include="Tools\Url.cs" />
+    <Compile Include="Tools\WebResource.cs" />
+    <Compile Include="Tools\WebStream.cs" />
+    <Compile Include="Udp\UdpHeader.cs" />
+    <Compile Include="Udp\UdpTransportOptions.cs" />
+    <Compile Include="Udp\UdpConnection.cs" />
+    <Compile Include="Udp\UdpMessage.cs" />
+    <Compile Include="Udp\UdpServer.cs" />
+    <Compile Include="Tools\SocketEventArgsCache.cs" />
+    <Compile Include="Utilities\Domains.cs" />
+    <Compile Include="Utilities\Identity.cs" />
+    <Compile Include="Utilities\WebAccessMonitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Efz.Common\Efz.Common.csproj">
+      <Project>{937604C5-00C6-4746-9707-32557335D306}</Project>
+      <Name>Efz.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Efz.Logging\Efz.Logging.csproj">
+      <Project>{BF042F36-B5CC-4486-8C76-CAEF86733A2C}</Project>
+      <Name>Efz.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Http\Javascript\" />
+    <Folder Include="Http\" />
+    <Folder Include="Display" />
+    <Folder Include="External\" />
+    <Folder Include="External\Alchemy\" />
+    <Folder Include="External\Alchemy\Handlers\" />
+    <Folder Include="External\Alchemy\Handlers\WebSocket\" />
+    <Folder Include="Smtp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="External\Alchemy\Alchemy.config" />
+    <None Include="External\Alchemy\AlchemyClient.js" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{FAB1B365-D5A6-41C4-A951-9A280BFBD8C1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">32</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Efz.Cql</RootNamespace>
+    <AssemblyName>Efz.Cql</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>INFO;DEBUG;WARNING;ERROR;WINDOWS</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>INFO;WARNING;ERROR</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '32' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '64' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x64</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cassandra">
+      <HintPath>..\packages\CassandraCSharpDriver.3.0.9\lib\net40\Cassandra.dll</HintPath>
+    </Reference>
+    <Reference Include="LZ4">
+      <HintPath>..\packages\lz4net.1.0.5.93\lib\net40-client\LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CqlCreateTable.cs" />
+    <Compile Include="Commands\CqlCreateTableProperty.cs" />
+    <Compile Include="Commands\CqlDelete.cs" />
+    <Compile Include="Commands\CqlDeleteEndIf.cs" />
+    <Compile Include="Commands\CqlDeleteEndWhere.cs" />
+    <Compile Include="Commands\CqlDeleteWhere.cs" />
+    <Compile Include="Commands\CqlInsert.cs" />
+    <Compile Include="Commands\CqlInsertValues.cs" />
+    <Compile Include="Commands\CqlDeleteIf.cs" />
+    <Compile Include="Commands\CqlSelectLimit.cs" />
+    <Compile Include="Commands\CqlUpdate.cs" />
+    <Compile Include="Commands\CqlUpdateEndIf.cs" />
+    <Compile Include="Commands\CqlUpdateIf.cs" />
+    <Compile Include="Commands\CqlUpdateWhere.cs" />
+    <Compile Include="Commands\CqlCreateIndex.cs" />
+    <Compile Include="Commands\CqlSelectOperation.cs" />
+    <Compile Include="Commands\CqlSelect.cs" />
+    <Compile Include="Commands\CqlSelectWhere.cs" />
+    <Compile Include="Commands\Cql.cs" />
+    <Compile Include="Commands\CqlUpdateWith.cs" />
+    <Compile Include="Entities\Cell.cs" />
+    <Compile Include="Entities\Column.cs" />
+    <Compile Include="Entities\ColumnAttribute.cs" />
+    <Compile Include="Entities\IRow.cs" />
+    <Compile Include="Entities\MetaCluster.cs" />
+    <Compile Include="Entities\IQuery.cs" />
+    <Compile Include="Entities\Keyspace.cs" />
+    <Compile Include="Entities\LoadBalancer.cs" />
+    <Compile Include="Entities\Row.cs" />
+    <Compile Include="Entities\RowCollection.cs" />
+    <Compile Include="Entities\RowEnumerator.cs" />
+    <Compile Include="Entities\Table.cs" />
+    <Compile Include="ManagerCql.cs" />
+    <Compile Include="Tools\Common.cs" />
+    <Compile Include="Tools\ConsistencyRaceException.cs" />
+    <Compile Include="Tools\DataType.cs" />
+    <Compile Include="Tools\FuseType.cs" />
+    <Compile Include="Tools\Query.cs" />
+    <Compile Include="Tools\QueryBuilder.cs" />
+    <Compile Include="Tools\TypeMap.cs" />
+    <Compile Include="Utilities\BlobData.cs" />
+    <Compile Include="Utilities\BlobMeta.cs" />
+    <Compile Include="Utilities\Blobs.cs" />
+    <Compile Include="Utilities\BlobStream.cs" />
+    <Compile Include="Utilities\Data.cs" />
+    <Compile Include="Utilities\Meta.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Efz.Common\Efz.Common.csproj">
+      <Project>{937604C5-00C6-4746-9707-32557335D306}</Project>
+      <Name>Efz.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Efz.Logging\Efz.Logging.csproj">
+      <Project>{BF042F36-B5CC-4486-8C76-CAEF86733A2C}</Project>
+      <Name>Efz.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

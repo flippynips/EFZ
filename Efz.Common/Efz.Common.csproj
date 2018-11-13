@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectGuid>{937604C5-00C6-4746-9707-32557335D306}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Efz.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Joshua\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <TargetFrameworkProfile />
+    <RootNamespace>Efz</RootNamespace>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">32</Platform>
+    <DelaySign>False</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>INFO;DEBUG;WARNING;ERROR;WINDOWS</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release32\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>INFO;WARNING;ERROR</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '32' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == '64' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x64</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpDX.Interop">
+      <HintPath>packages\SharpDX.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arithmetic\Variables\CurveVector2.cs" />
+    <Compile Include="Arithmetic\Variables\CurveVector4.cs" />
+    <Compile Include="Collections\FlowRig.cs" />
+    <Compile Include="Collections\SafeQueue.cs" />
+    <Compile Include="Collections\Band.cs" />
+    <Compile Include="Collections\ArrayQueue.cs" />
+    <Compile Include="Collections\Queue.cs" />
+    <Compile Include="Collections\ArrayAir.cs" />
+    <Compile Include="Collections\ArrayRig.cs" />
+    <Compile Include="Collections\Belt.cs" />
+    <Compile Include="Collections\Capsule.cs" />
+    <Compile Include="Collections\Layer.cs" />
+    <Compile Include="Collections\RangeRig.cs" />
+    <Compile Include="Collections\SortedRig.cs" />
+    <Compile Include="Collections\Stack.cs" />
+    <Compile Include="Collections\TightRig.cs" />
+    <Compile Include="Collections\TypeQueue.cs" />
+    <Compile Include="Constants\Aliases.cs" />
+    <Compile Include="Constants\Ascii.cs" />
+    <Compile Include="Constants\Chars.cs" />
+    <Compile Include="Constants\Encodings.cs" />
+    <Compile Include="Constants\Error.cs" />
+    <Compile Include="Constants\Format.cs" />
+    <Compile Include="Constants\Global.cs" />
+    <Compile Include="Constants\Language.cs" />
+    <Compile Include="Constants\Mime.cs" />
+    <Compile Include="Constants\Protocols.cs" />
+    <Compile Include="Data\ByteIterator.cs" />
+    <Compile Include="Data\Cache.cs" />
+    <Compile Include="Data\CacheTimed.cs" />
+    <Compile Include="Data\CacheValue.cs" />
+    <Compile Include="Data\Configuration.cs" />
+    <Compile Include="Data\Connections\Connection.cs" />
+    <Compile Include="Data\Connections\ConnectionLocal.cs" />
+    <Compile Include="Data\ByteBuffer.cs" />
+    <Compile Include="Data\CsvWriter.cs" />
+    <Compile Include="Data\FileExtractor.cs" />
+    <Compile Include="Data\Hex.cs" />
+    <Compile Include="Data\StreamHelper.cs" />
+    <Compile Include="Data\Structures\AssetState.cs" />
+    <Compile Include="Data\Structures\NodeEnumerator.cs" />
+    <Compile Include="Data\Structures\ConnectionState.cs" />
+    <Compile Include="Data\Structures\Node.cs" />
+    <Compile Include="Data\Structures\NodeSerialization.cs" />
+    <Compile Include="Data\Structures\PatternSearch.cs" />
+    <Compile Include="Data\Structures\SnapSearch.cs" />
+    <Compile Include="Data\Structures\StreamState.cs" />
+    <Compile Include="Data\Structures\TreeSearch.cs" />
+    <Compile Include="Data\Structures\ValueMedium.cs" />
+    <Compile Include="Data\TextParsing\Extract\Extract.cs" />
+    <Compile Include="Data\TextParsing\Extract\ExtractAll.cs" />
+    <Compile Include="Data\TextParsing\Extract\ExtractElement.cs" />
+    <Compile Include="Data\TextParsing\Extract\ExtractIpAddress.cs" />
+    <Compile Include="Data\TextParsing\Extract\ExtractLine.cs" />
+    <Compile Include="Data\TextParsing\Extract\ExtractSection.cs" />
+    <Compile Include="Data\TextParsing\Extract\ExtractUrl.cs" />
+    <Compile Include="Data\TextParsing\Parse.cs" />
+    <Compile Include="Data\TextParsing\ParseAll.cs" />
+    <Compile Include="Data\TextParsing\ParseElement.cs" />
+    <Compile Include="Data\TextParsing\ParseIpAddress.cs" />
+    <Compile Include="Data\TextParsing\ParseLine.cs" />
+    <Compile Include="Data\TextParsing\ParseSection.cs" />
+    <Compile Include="Data\TextParsing\ParseUrl.cs" />
+    <Compile Include="Data\TextTemplate.cs" />
+    <Compile Include="Data\WeakCache.cs" />
+    <Compile Include="Interfaces\IEmptyConstructor.cs" />
+    <Compile Include="Interfaces\IDeferValue.cs" />
+    <Compile Include="Interfaces\IArgs.cs" />
+    <Compile Include="Interfaces\IDeserializable.cs" />
+    <Compile Include="Interfaces\ISize.cs" />
+    <Compile Include="Interfaces\IString.cs" />
+    <Compile Include="ManagerConnections.cs" />
+    <Compile Include="ManagerLogs.cs" />
+    <Compile Include="ManagerResources.cs" />
+    <Compile Include="ManagerUpdate.cs" />
+    <Compile Include="Arithmetic\Math.cs" />
+    <Compile Include="Threading\Delegates\ActionTryCatch.cs" />
+    <Compile Include="Threading\LockReadWrite.cs" />
+    <Compile Include="Threading\LockShared.cs" />
+    <Compile Include="Threading\LockSharedEvents.cs" />
+    <Compile Include="Threading\EfzTaskScheduler.cs" />
+    <Compile Include="Threading\NeedleContext.cs" />
+    <Compile Include="Threading\Needles\Needle.cs" />
+    <Compile Include="Threading\Needles\NeedleDynamic.cs" />
+    <Compile Include="Threading\Needles\NeedleRhythmic.cs" />
+    <Compile Include="Threading\Needles\NeedleElastic.cs" />
+    <Compile Include="Threading\Pocket.cs" />
+    <Compile Include="Threading\Safe.cs" />
+    <Compile Include="Threading\Shared.cs" />
+    <Compile Include="Threading\ThreadItem.cs" />
+    <Compile Include="Threading\Delegates\Action.cs" />
+    <Compile Include="Threading\Delegates\ActionActive.cs" />
+    <Compile Include="Threading\Delegates\ActionEvent.cs" />
+    <Compile Include="Threading\Delegates\ActionPop.cs" />
+    <Compile Include="Threading\Delegates\ActionSequence.cs" />
+    <Compile Include="Threading\Delegates\ActionAct.cs" />
+    <Compile Include="Threading\Delegates\ActionPocket.cs" />
+    <Compile Include="Threading\Delegates\ActionPair.cs" />
+    <Compile Include="Threading\Delegates\ActionRoll.cs" />
+    <Compile Include="Threading\Delegates\ActionSafeEvent.cs" />
+    <Compile Include="Threading\Delegates\ActionSet.cs" />
+    <Compile Include="Threading\Delegates\ArgsSet.cs" />
+    <Compile Include="Threading\Delegates\Func.cs" />
+    <Compile Include="Threading\Delegates\FuncSet.cs" />
+    <Compile Include="Threading\Delegates\IAction.cs" />
+    <Compile Include="Threading\Delegates\IRun.cs" />
+    <Compile Include="Threading\Delegates\IFunc.cs" />
+    <Compile Include="Threading\Delegates\SafeAct.cs" />
+    <Compile Include="Threading\Delegates\Act.cs" />
+    <Compile Include="Tools\InlineComparer.cs" />
+    <Compile Include="Tools\Link.cs" />
+    <Compile Include="Tools\PathResolver.cs" />
+    <Compile Include="Tools\Struct.cs" />
+    <Compile Include="Tools\Timekeeper.cs" />
+    <Compile Include="Tools\TimeInline.cs" />
+    <Compile Include="Tools\TimeLimited.cs" />
+    <Compile Include="Tools\WeakReferencer.cs" />
+    <Compile Include="Tools\Teple.cs" />
+    <Compile Include="Utilities\Cache\BufferCache.cs" />
+    <Compile Include="Utilities\Cache\MemoryStreamCache.cs" />
+    <Compile Include="Utilities\Cache\StringBuilderCache.cs" />
+    <Compile Include="Utilities\Dynamic.cs" />
+    <Compile Include="Utilities\Crypto.cs" />
+    <Compile Include="Utilities\ExtendCollections.cs" />
+    <Compile Include="Utilities\ExtendDateTime.cs" />
+    <Compile Include="Utilities\ExtendException.cs" />
+    <Compile Include="Utilities\ExtendIPEndPoint.cs" />
+    <Compile Include="Utilities\ExtendMath.cs" />
+    <Compile Include="Interfaces\ICloneable.cs" />
+    <Compile Include="Interfaces\IGet.cs" />
+    <Compile Include="Interfaces\ITranslate.cs" />
+    <Compile Include="Arithmetic\Average.cs" />
+    <Compile Include="Arithmetic\Deviation.cs" />
+    <Compile Include="Arithmetic\Structures\Matrix.cs" />
+    <Compile Include="Arithmetic\Structures\Vector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ExtendStream.cs" />
+    <Compile Include="Utilities\ExtendString.cs" />
+    <Compile Include="Threading\Lock.cs" />
+    <Compile Include="Threading\ThreadHandle.cs" />
+    <Compile Include="Threading\LockItem.cs" />
+    <Compile Include="Tools\Flipper.cs" />
+    <Compile Include="Tools\Size.cs" />
+    <Compile Include="Tools\TaskMachine.cs" />
+    <Compile Include="Tools\Ticker.cs" />
+    <Compile Include="Tools\Timeout.cs" />
+    <Compile Include="Tools\Timer.cs" />
+    <Compile Include="Arithmetic\Variables\Curve.cs" />
+    <Compile Include="Arithmetic\Variables\CurveDouble.cs" />
+    <Compile Include="Arithmetic\Variables\CurveVector3.cs" />
+    <Compile Include="Arithmetic\Variables\RangeDouble.cs" />
+    <Compile Include="Arithmetic\Variables\ConstantDouble.cs" />
+    <Compile Include="Arithmetic\Variables\RangeVector2.cs" />
+    <Compile Include="Arithmetic\Variables\ConstantVector.cs" />
+    <Compile Include="Tools\Watch.cs" />
+    <Compile Include="Utilities\ExtendChar.cs" />
+    <Compile Include="Utilities\Fs.cs" />
+    <Compile Include="Utilities\LogToFile.cs" />
+    <Compile Include="Utilities\Micron.cs" />
+    <Compile Include="Utilities\Murmer3.cs" />
+    <Compile Include="Utilities\Processes\ProcessHandle.cs" />
+    <Compile Include="Utilities\Randomize.cs" />
+    <Compile Include="Utilities\Generic.cs" />
+    <Compile Include="Utilities\Singleton.cs" />
+    <Compile Include="Utilities\StringAnalysis.cs" />
+    <Compile Include="Utilities\SystemInformation.cs" />
+    <Compile Include="Utilities\Time.cs" />
+    <Compile Include="Utilities\TypeMap.cs" />
+    <Compile Include="Utilities\Validate.cs" />
+    <Compile Include="Interfaces\ISerializable.cs" />
+    <Compile Include="Tools\Temporary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Tools\" />
+    <Folder Include="Arithmetic\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Data\TextParsing\" />
+    <Folder Include="Threading\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Efz.Logging\Efz.Logging.csproj">
+      <Project>{BF042F36-B5CC-4486-8C76-CAEF86733A2C}</Project>
+      <Name>Efz.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
